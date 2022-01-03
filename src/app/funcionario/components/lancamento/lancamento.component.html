@@ -1,0 +1,37 @@
+<div fxFlex="30" fxFlexOffset="35">
+    <mat-list >
+        <mat-list-item fxLayoutAlign="center">
+            <a mat-button color="warn" [routerLink]="['/funcionario/listagem']">
+                Ver lançamentos
+            </a>
+        </mat-list-item>
+
+        <mat-list-item>
+            <strong>Data:</strong>&nbsp; {{ dataAtual }}
+        </mat-list-item>
+        <mat-list-item> 
+            <strong>Localizacao</strong>&nbsp; {{ geoLocation }}
+        </mat-list-item>
+       
+        <mat-list-item fxLayoutAlign="center">
+            <button [disabled]="!exibirInicioTrabalho()" mat-raised-button color="primary" (click)="iniciarTrabalho()">
+                Iniciar Trabalho
+            </button>
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center" >
+            <button [disabled]="!exibirInicioAlmoco()" mat-raised-button color="primary" (click)="iniciarAlmoco()">
+                Iniciar Almoço
+            </button>
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <button [disabled]="!exibirTerminoAlmoco()" mat-raised-button color="primary" (click)="terminarAlmoco()">
+                Termino Almoço
+            </button>
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center" >
+            <button [disabled]="!exibirTerminoTrabalho()" mat-raised-button color="primary" (click)="terminarTrabalho()">
+                Termino Trabalho
+            </button>
+        </mat-list-item>
+    </mat-list>
+</div>
